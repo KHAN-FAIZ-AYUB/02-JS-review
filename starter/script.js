@@ -144,7 +144,7 @@ function getBook(id) {
 }
 
 // Destructuring
-
+/*
 const book = getBook(2);
 book;
 
@@ -161,3 +161,13 @@ console.log(author, title, genres);
 const [primaryGenre, secondaryGenre] = genres;
 
 console.log(primaryGenre, secondaryGenre);
+*/
+
+// Rest & Spread Operator
+const book = getBook(2);
+
+const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
+  book;
+
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+console.log(primaryGenre, secondaryGenre, otherGenres);
