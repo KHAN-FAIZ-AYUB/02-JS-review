@@ -208,3 +208,16 @@ console.log(`The book has ${pageRange} pages`);
 
 // const getYear = (str) => str.split("-")[0];
 // console.log(getYear(publicationDate));
+
+// Short_Circuiting and Logical operators
+
+// short circuiting using && operator
+
+console.log(true && "Some strimg");
+console.log(false && "Some strimg");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+// FALSY VALUES:=>  0, "" , null, undefined
+
+console.log("faiz" && "khan");
+console.log(0 && "khan");
