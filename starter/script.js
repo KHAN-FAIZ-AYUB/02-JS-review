@@ -187,9 +187,11 @@ updatedBook;
 
 // Template Literals
 
-const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${
-  publicationDate.split("-")[0]
-}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
+const getYear = (str) => str.split("-")[0]; // Arrow function
+
+const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${getYear(
+  publicationDate
+)}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
 summary;
 
 // Ternary Opperator
@@ -197,3 +199,12 @@ summary;
 const pageRange = pages > 1000 ? "Over a Thousand" : "Less than Thousand";
 pageRange;
 console.log(`The book has ${pageRange} pages`);
+
+// Arrow Function
+
+// function getYear(str) {
+//   return str.split("-")[0];
+// }
+
+// const getYear = (str) => str.split("-")[0];
+// console.log(getYear(publicationDate));
