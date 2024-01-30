@@ -164,7 +164,7 @@ console.log(primaryGenre, secondaryGenre);
 */
 
 // Rest & Spread Operator
-const book = getBook(2);
+const book = getBook(3);
 
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
   book;
@@ -213,8 +213,8 @@ console.log(`The book has ${pageRange} pages`);
 
 // short circuiting using && operator
 
-console.log(true && "Some strimg");
-console.log(false && "Some strimg");
+console.log(true && "Some string");
+console.log(false && "Some string");
 console.log(hasMovieAdaptation && "This book has a movie");
 
 // FALSY VALUES:=>  0, "" , null, undefined
@@ -232,9 +232,9 @@ console.log(book.translations.spanish);
 const spanishtranslation = book.translations.spanish || "NOT TRANSLATED";
 console.log(spanishtranslation);
 
-console.log(book.reviews.librarything.reviewsCount);
-const countWrong = book.reviews.librarything.reviewsCount || "No Data";
-console.log(countWrong);
+// console.log(book.reviews.librarything.reviewsCount);
+// const countWrong = book.reviews.librarything.reviewsCount || "No Data";
+// console.log(countWrong);
 
 //  short circuiting using nullish coalescing (??) operator
 console.log(true ?? "Some String");
@@ -242,5 +242,14 @@ console.log(false ?? "Some String");
 console.log(0 ?? "Some String");
 console.log(undefined ?? "Some String");
 
-const countWrong1 = book.reviews.librarything.reviewsCount ?? "No Data";
-console.log(countWrong1);
+// const countWrong1 = book.reviews.librarything.reviewsCount ?? "No Data";
+// console.log(countWrong1);
+
+// Optional Chaining
+
+function getreviewCount(book) {
+  const goodreads = book.reviews.goodreads.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+console.log(getreviewCount(book));
