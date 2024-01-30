@@ -161,7 +161,7 @@ console.log(author, title, genres);
 const [primaryGenre, secondaryGenre] = genres;
 
 console.log(primaryGenre, secondaryGenre);
-*/
+
 
 // Rest & Spread Operator
 const book = getBook(3);
@@ -253,3 +253,28 @@ function getreviewCount(book) {
   return goodreads + librarything;
 }
 console.log(getreviewCount(book));
+*/
+
+// The array map method
+
+const books = getBooks();
+books;
+
+function getreviewCount(book) {
+  const goodreads = book.reviews.goodreads.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+console.log(x);
+
+const titles = books.map((book) => book.title);
+console.log(titles);
+
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+  reviewsCount: getreviewCount(book),
+}));
+console.log(essentialData);
