@@ -164,7 +164,7 @@ console.log(primaryGenre, secondaryGenre);
 */
 
 // Rest & Spread Operator
-const book = getBook(2);
+const book = getBook(1);
 
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
   book;
@@ -174,3 +174,13 @@ console.log(primaryGenre, secondaryGenre, otherGenres);
 
 const newGenres = ["epic fantasy", ...genres];
 newGenres;
+
+const updatedBook = {
+  ...book,
+  // Adding new property
+  moviePublicationDate: "2001-12-19",
+
+  // Overwriting an existing propert
+  pages: 1210,
+};
+updatedBook;
