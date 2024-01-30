@@ -256,7 +256,7 @@ console.log(getreviewCount(book));
 */
 
 // The array map method
-
+/*
 const books = getBooks();
 books;
 
@@ -327,3 +327,12 @@ const bookAfterUpdate = bookAfterDelete.map((book) =>
   book.id === 1 ? { ...book, pages: 1210 } : book
 );
 bookAfterUpdate;
+*/
+
+// Asynchronous JS Promises
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+console.log("Mr.Khan");
