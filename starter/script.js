@@ -305,3 +305,13 @@ console.log(arr);
 
 const sortByPages = books.slice().sort((a, b) => b.pages - a.pages);
 sortByPages;
+
+// working with immutable arrays
+
+const newBook = {
+  id: 6,
+  title: "harry Potter and Chambber of Secrets",
+  author: "J.K. Rownling",
+};
+const bookAfterAdd = [...books, newBook];
+bookAfterAdd;
