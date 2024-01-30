@@ -189,5 +189,11 @@ updatedBook;
 
 const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${
   publicationDate.split("-")[0]
-}`;
+}. The book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
 summary;
+
+// Ternary Opperator
+
+const pageRange = pages > 1000 ? "Over a Thousand" : "Less than Thousand";
+pageRange;
+console.log(`The book has ${pageRange} pages`);
