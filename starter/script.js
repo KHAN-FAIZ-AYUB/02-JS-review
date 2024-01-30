@@ -221,3 +221,17 @@ console.log(hasMovieAdaptation && "This book has a movie");
 
 console.log("faiz" && "khan");
 console.log(0 && "khan");
+
+// short circuiting using || operator
+
+console.log(true || "Some string");
+console.log(false || "Some string");
+
+console.log(book.translations.spanish);
+
+const spanishtranslation = book.translations.spanish || "NOT TRANSLATED";
+console.log(spanishtranslation);
+
+console.log(book.reviews.librarything.reviewsCount);
+const countWrong = book.reviews.librarything.reviewsCount || "No Data";
+console.log(countWrong);
