@@ -307,6 +307,7 @@ const sortByPages = books.slice().sort((a, b) => b.pages - a.pages);
 sortByPages;
 
 // working with immutable arrays
+// adding obj in array
 
 const newBook = {
   id: 6,
@@ -315,3 +316,8 @@ const newBook = {
 };
 const bookAfterAdd = [...books, newBook];
 bookAfterAdd;
+
+// deleting obj from array
+
+const bookAfterDelete = bookAfterAdd.filter((book) => book.id !== 3);
+bookAfterDelete;
