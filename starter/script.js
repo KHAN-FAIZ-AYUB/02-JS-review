@@ -164,7 +164,7 @@ console.log(primaryGenre, secondaryGenre);
 */
 
 // Rest & Spread Operator
-const book = getBook(1);
+const book = getBook(2);
 
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
   book;
@@ -235,3 +235,12 @@ console.log(spanishtranslation);
 console.log(book.reviews.librarything.reviewsCount);
 const countWrong = book.reviews.librarything.reviewsCount || "No Data";
 console.log(countWrong);
+
+//  short circuiting using nullish coalescing (??) operator
+console.log(true ?? "Some String");
+console.log(false ?? "Some String");
+console.log(0 ?? "Some String");
+console.log(undefined ?? "Some String");
+
+const countWrong1 = book.reviews.librarything.reviewsCount ?? "No Data";
+console.log(countWrong1);
